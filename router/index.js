@@ -5,6 +5,7 @@ const producstRouter = require('./producst.router');
 const jobRouter = require('./job.router');
 const authRouter = require('./auth.router');
 const errorHandle = require('../middlewares/error.handle');
+const cartRouter = require("./cart.router");
 
 module.exports = (app) => {
   app.use('/api/accounts', accountRouter);
@@ -13,5 +14,6 @@ module.exports = (app) => {
   app.use('/api/products', producstRouter);
   app.use('/api/jobs', jobRouter);
   app.use('/api/auth', authRouter);
+  app.use('/api/carts', cartRouter);
   app.use(errorHandle);
 };

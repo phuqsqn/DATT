@@ -22,6 +22,10 @@ module.exports = {
     });
     return res.status(200).json(category);
   },
+  getAllProduct: async(req, res) => {
+    const categories = await productModel.find();
+    return res.status(200).json(categories);
+  },
   updateProduct: async (req, res, next) => {
     const id = req.params.id;
     const body = req.body;

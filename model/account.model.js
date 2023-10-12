@@ -46,4 +46,6 @@ accountSchema.pre('save', function(next){
     }
     next();
 })
+//thêm toJSON xóa password
+
 module.exports = mongoose.model('account', accountSchema);
